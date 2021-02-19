@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "target": "es2020",
+  
+    // "baseUrl": ".",
+    "outDir": "dist",
+  
+    "incremental": true,
+    "declaration": true,
+    "sourceMap": true,
+  
+    "moduleResolution": "node",
+    // "skipLibCheck": true,
+    "esModuleInterop": true,
+    // "allowSyntheticDefaultImports": true
+
+
+    // checks
+    "strict": true,
+    "alwaysStrict": true,
+    "strictBindCallApply": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "forceConsistentCasingInFileNames": true,
+  
+    // "traceResolution": true,
+    // "composite": true,
+    // "inlineSourceMap": true
+    "typeRoots": [
+      "./src/types",
+      "./node_modules/@types"
+    ]
+  },
+  "include" : ["src/**/*"]
+}

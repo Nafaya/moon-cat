@@ -1,0 +1,5 @@
+code/dist
+code/node_modules
+code/coverage
+code/.ts-jest.log
+.vscode

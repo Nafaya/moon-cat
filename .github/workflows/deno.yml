@@ -23,7 +23,7 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
       with:
-        registries: 362756477240
+        registries: ${{ AWS_ECR_REGITRY_ID }}
 #     - run: aws ecr get-login-password --region eu-central-1
 #     - name: Login to AWS Elastic Container Registry
 #       uses: docker/login-action@v1 
@@ -32,6 +32,15 @@ jobs:
 #         username: AWS
 #         password: $( aws ecr get-login-password --region eu-central-1 )
 #     - run: aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin 362756477240.dkr.ecr.eu-central-1.amazonaws.com
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+        context: ./code
+        push: true
+        tags: |
+          362756477240.dkr.ecr.eu-central-1.amazonaws.com/testapp:latest
+          362756477240.dkr.ecr.eu-central-1.amazonaws.com/mooncat:latest
+          362756477240.dkr.ecr.eu-central-1.amazonaws.com/mooncat/mooncat:latest
     - run: aws --version
     - run: npm -v
     - run: node -v

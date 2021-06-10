@@ -19,7 +19,8 @@ jobs:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
-    - name: Login to GitHub Container Registry
+    - run: aws ecr get-login-password --region ${{ secrets.AWS_REGION }}
+    - name: Login to AWS Elastic Container Registry
       uses: docker/login-action@v1 
       with:
         registry: 362756477240.dkr.ecr.eu-central-1.amazonaws.com

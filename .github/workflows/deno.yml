@@ -23,7 +23,7 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
       with:
-        registries: 362756477240.dkr.ecr.eu-central-1.amazonaws.com
+        registries: 362756477240
 #     - run: aws ecr get-login-password --region eu-central-1
 #     - name: Login to AWS Elastic Container Registry
 #       uses: docker/login-action@v1 

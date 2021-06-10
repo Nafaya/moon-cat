@@ -46,8 +46,9 @@ jobs:
       with:
         context: ./code
         push: true
-        tags: |
-          362756477240.dkr.ecr.eu-central-1.amazonaws.com/testregistry:latest
+        tags: 362756477240.dkr.ecr.eu-central-1.amazonaws.com/testregistry:latest
+        cache-from: type=local,src=/tmp/.buildx-cache
+        cache-to: type=local,dest=/tmp/.buildx-cache-new
     - run: aws --version
     - run: npm -v
     - run: node -v

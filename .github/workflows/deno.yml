@@ -38,9 +38,9 @@ jobs:
         context: ./code
         push: true
         tags: |
-          362756477240.dkr.ecr.eu-central-1.amazonaws.com/testapp:latest
-          362756477240.dkr.ecr.eu-central-1.amazonaws.com/mooncat:latest
-          362756477240.dkr.ecr.eu-central-1.amazonaws.com/mooncat/mooncat:latest
+          362756477240.dkr.ecr.eu-central-1.amazonaws.com/testregistry/testapp:latest
+          362756477240.dkr.ecr.eu-central-1.amazonaws.com/testregistry/mooncat:latest
+          362756477240.dkr.ecr.eu-central-1.amazonaws.com/testregistry/mooncat/mooncat:latest
     - run: aws --version
     - run: npm -v
     - run: node -v
